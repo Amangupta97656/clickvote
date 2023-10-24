@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click to Vote</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #voteCount {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <button id="voteButton">Click to Vote</button>
+    <p id="voteCount">Votes: 0</p>
+    <script>
+        let voteCount = 0;
+
+        const voteButton = document.getElementById("voteButton");
+        const voteCountDisplay = document.getElementById("voteCount");
+
+        voteButton.addEventListener("click", () => {
+            voteCount++;
+            voteCountDisplay.textContent = `Votes: ${voteCount}`;
+        });
+    </script>
+</body>
+</html>
